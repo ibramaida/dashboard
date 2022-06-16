@@ -480,9 +480,12 @@ body {
 /* ##################################### */
 
 .dashboard {
+  padding: 1.5rem 4rem;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  /* grid-template-rows: repeat(5, 1fr); */
+  grid-template-rows: 0.5fr 1fr 1.5fr 1.5fr;
+  row-gap: 1rem;
+  column-gap: 1.5rem;
 }
 
 .grid-header {
@@ -495,4 +498,10 @@ body {
 .profile {
   display: flex;
   align-items: center;
+}
+
+.box {
+  background-color: var(--surface2);
+  padding: 1.4rem;
+  border-radius: 12px;
 }
