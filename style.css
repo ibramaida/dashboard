@@ -634,6 +634,16 @@ body {
   border-bottom: 1px solid var(--surface3);
 }
 
+.row:last-child {
+  border: 0;
+}
+.up {
+  color: var(--brand);
+}
+.down {
+  color: var(--accent);
+}
+
 .row > div:first-child {
   display: flex;
   align-items: start;
@@ -653,6 +663,31 @@ body {
   align-items: start;
   gap: 0.2rem;
 }
-.row > .buy svg {
-  color: var(--brand);
+
+/* ############################## */
+.spending-summary {
+  padding: 1.5rem;
+  background-color: var(--surface2);
+  border-radius: 12px;
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.chart-line {
+  display: grid;
+  min-height: 90%;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  align-items: center;
+}
+
+.chart-line span {
+  color: var(--text2);
+}
+
+.line {
+  grid-column: 2 / -1;
+  width: 100%;
+  height: 1px;
+  background-color: var(--surface3);
 }
