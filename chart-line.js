@@ -6,7 +6,7 @@ console.log(brandColor);
 
 const labels = ["Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"];
 
-const data = {
+const dataLine = {
   labels: labels,
   datasets: [
     {
@@ -24,10 +24,10 @@ const data = {
   ],
 };
 
-const config = {
+const configLine = {
   type: "line",
-  data: data,
+  data: dataLine,
   options: {},
 };
 
-const myChart = new Chart(document.getElementById("myChart"), config);
+const chartLine = new Chart(document.getElementById("chartLine"), configLine);

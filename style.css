@@ -427,6 +427,7 @@ body {
   overflow: hidden;
   display: grid;
   grid-template-columns: 1.8fr 9fr;
+  margin-block: 2rem;
 }
 
 .header {
@@ -485,10 +486,10 @@ body {
 .dashboard {
   padding: 1.5rem 4rem;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  /* grid-template-columns: repeat(4, 1fr); */
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-template-rows: 0.5fr 0.5fr 0.5fr 1.5fr 1.5fr;
-  grid-template-rows: 0.5fr repeat(5, 1fr);
+  /* grid-template-rows: 0.5fr 0.5fr 0.5fr 1.5fr 1.5fr; */
+  grid-template-rows: 0.25fr repeat(5, 1fr);
 
   row-gap: 2rem;
   column-gap: 1rem;
@@ -708,4 +709,93 @@ body {
 
 .text-reg {
   color: var(--text2);
+}
+
+/* ################################ */
+
+.spending-per-month {
+  padding: 1.5rem;
+  background-color: var(--surface2);
+  border-radius: 12px;
+  grid-row: span 3;
+}
+
+.spending-per-month .col .row {
+  align-items: center;
+}
+
+.dot {
+  display: block;
+  width: 6px;
+  aspect-ratio: 1;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.row
+  :is(.food, .credit, .petrol, .clothes):is(.food, .credit, .petrol, .clothes) {
+  align-items: center;
+}
+
+.food > span {
+  background-color: var(--brand);
+}
+.credit > span {
+  background-color: var(--accent);
+}
+.petrol > span {
+  background-color: var(--brand);
+}
+.clothes > span {
+  background-color: var(--accent);
+}
+
+.charts-circle {
+  display: flex;
+  align-items: flex-end;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.chart-circle-1,
+.chart-circle-2 {
+  position: relative;
+}
+
+.chart-circle-2 {
+  opacity: 0.2;
+}
+
+.chart-circle-1::before {
+  content: "-$ 2625";
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 12px;
+  color: var(--text2);
+}
+.chart-circle-2::before {
+  content: "+$ 5500";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 12px;
+  color: var(--text2);
+}
+
+.chart-circle-1 p {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+/* ################################ */
+
+.balance-overview {
+  padding: 1.5rem;
+  background-color: var(--surface2);
+  border-radius: 12px;
+  grid-row: span 2;
+  grid-column: span 3;
 }

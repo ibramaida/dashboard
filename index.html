@@ -16,7 +16,7 @@
   </head>
   <body>
     <div class="container">
-      <!-- Sidebar -->
+      <!-- * * Sidebar -->
       <header class="header">
         <a href="#" class="logo">
           <svg
@@ -175,7 +175,7 @@
         </nav>
       </header>
       <div class="dashboard" id="dashboard">
-        <!-- Header / Search / Profile -->
+        <!-- * * Header / Search / Profile -->
         <header class="grid-header">
           <div class="search">
             <svg
@@ -233,7 +233,7 @@
             </svg>
           </div>
         </header>
-        <!-- Balance -->
+        <!-- * * Balance -->
         <div class="balance box">
           <h2 class="header2">Total Balance</h2>
           <div>
@@ -259,7 +259,7 @@
             <p class="header2">5%</p>
           </div>
         </div>
-        <!-- Saving -->
+        <!-- * * Saving -->
         <div class="saving box">
           <h2 class="header2">Saving</h2>
           <div>
@@ -285,7 +285,7 @@
             <p class="header2">13%</p>
           </div>
         </div>
-        <!-- Investing -->
+        <!-- * * Investing -->
         <div class="investing box">
           <h2 class="header2">Investing</h2>
           <div>
@@ -311,7 +311,7 @@
             <p class="header2">7%</p>
           </div>
         </div>
-        <!-- Currency -->
+        <!-- * * Currency -->
         <div class="currency">
           <header class="box-header">
             <h2 class="header2">Currency</h2>
@@ -502,7 +502,7 @@
             </div>
           </div>
         </div>
-        <!-- Spending Summary -->
+        <!-- * * Spending Summary -->
         <div class="spending-summary">
           <header class="box-header">
             <h2 class="header2">Spending Summary</h2>
@@ -523,9 +523,9 @@
             </div>
           </header>
           <div>
-            <canvas id="myChart"></canvas>
+            <canvas id="chartLine"></canvas>
           </div>
-          <!-- <div class="chart-line">
+          <!-- * * <div class="chart-line">
             <span class="text-reg">30K</span>
             <span class="line"></span>
             <span class="text-reg">20K</span>
@@ -542,7 +542,7 @@
             <span class="text-reg">Su</span>
           </div> -->
         </div>
-        <!-- Recent Transactions -->
+        <!-- * * * Recent Transactions -->
         <div class="recent-transactions">
           <header class="box-header">
             <h2 class="header2">Recent transactions</h2>
@@ -768,9 +768,109 @@
             </div>
           </div>
         </div>
+        <!-- *** spending per month -->
+        <div class="spending-per-month">
+          <header class="box-header">
+            <h2 class="header2">Spending per month</h2>
+            <div>
+              <span class="text-reg">May</span>
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6.34317 7.75732L4.92896 9.17154L12 16.2426L19.0711 9.17157L17.6569 7.75735L12 13.4142L6.34317 7.75732Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
+          </header>
+          <div class="chart-circle">
+            <div class="charts-circle">
+              <div class="chart-circle-1">
+                <p class="text-reg">Spending</p>
+                <img src="./images/chart-donat.svg" alt="chart" />
+              </div>
+              <div class="chart-circle-2">
+                <img src="./images/chart-donat-opacity.svg" alt="" />
+              </div>
+            </div>
+            <div class="col">
+              <div class="row">
+                <div class="food">
+                  <span class="dot"></span>
+                  <p class="text-semi">Food</p>
+                </div>
+                <div class="percent">
+                  <span class="text-semi">-$ 1010.4</span>
+                  <span class="text-reg">40%</span>
+                </div>
+              </div>
+              <div class="row">
+                <div class="credit">
+                  <span class="dot"></span>
+                  <p class="text-semi">Credit</p>
+                </div>
+                <div class="percent">
+                  <span class="text-semi">-$ 505.2</span>
+                  <span class="text-reg">20%</span>
+                </div>
+              </div>
+              <div class="row">
+                <div class="petrol">
+                  <span class="dot"></span>
+                  <p class="text-semi">Petrol</p>
+                </div>
+                <div class="percent">
+                  <span class="text-semi">-$ 202</span>
+                  <span class="text-reg">8%</span>
+                </div>
+              </div>
+              <div class="row">
+                <div class="clothes">
+                  <span class="dot"></span>
+                  <p class="text-semi">Clothes</p>
+                </div>
+                <div class="percent">
+                  <span class="text-semi">-$ 102.3</span>
+                  <span class="text-reg">5%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Balance overview -->
+        <div class="balance-overview">
+          <header class="box-header">
+            <h2 class="header2">Balance overview</h2>
+            <div>
+              <span class="text-reg">Last year</span>
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6.34317 7.75732L4.92896 9.17154L12 16.2426L19.0711 9.17157L17.6569 7.75735L12 13.4142L6.34317 7.75732Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
+          </header>
+          <div class="chart-bar">
+            <img src="./images/char-bar.svg" alt="bar chart" />
+          </div>
+        </div>
       </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js"></script>
     <script src="./chart-line.js"></script>
+    <script src="./chart-donat.js"></script>
+    <script src="./chart-donat-dark.js"></script>
   </body>
 </html>
