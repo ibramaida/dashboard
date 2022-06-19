@@ -523,7 +523,14 @@
             </div>
           </header>
           <div>
-            <canvas id="chartLine"></canvas>
+            <!-- <canvas id="chartLine"></canvas> -->
+            <picture>
+              <source
+                srcset="./images/chart-line-dark.svg"
+                media="(prefers-color-scheme: dark)"
+              />
+              <img src="./images/chart-line-light.svg" alt="line chart light" />
+            </picture>
           </div>
           <!-- * * <div class="chart-line">
             <span class="text-reg">30K</span>
@@ -863,7 +870,13 @@
             </div>
           </header>
           <div class="chart-bar">
-            <img src="./images/char-bar.svg" alt="bar chart" />
+            <picture>
+              <source
+                srcset="./images/chart-bar-dark.svg"
+                media="(prefers-color-scheme: dark)"
+              />
+              <img src="./images/chart-bar-light.svg" alt="bar chart light" />
+            </picture>
           </div>
         </div>
       </div>
