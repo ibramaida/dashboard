@@ -10,6 +10,10 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
+    <!-- <link
+      rel="stylesheet"
+      href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+    /> -->
     <link rel="stylesheet" href="style.css" />
 
     <title>Dashboard Design</title>
@@ -256,9 +260,12 @@
         </header>
         <div class="slider">
           <!-- * * slide -->
-          <div class="slide">
+          <div
+            class="slide main-carousel"
+            data-flickity='{ "wrapAround": true }'
+          >
             <!-- * * Balance -->
-            <div class="balance box">
+            <div id="balance" class="balance box carousel-cell">
               <h2 class="header2">Total Balance</h2>
               <div>
                 <p class="header1">$ 16 995.65</p>
@@ -284,7 +291,7 @@
               </div>
             </div>
             <!-- * * Saving -->
-            <div class="saving box">
+            <div id="saving" class="saving box carousel-cell">
               <h2 class="header2">Saving</h2>
               <div>
                 <p class="header1">$ 5 900.5</p>
@@ -310,7 +317,7 @@
               </div>
             </div>
             <!-- * * Investing -->
-            <div class="investing box">
+            <div id="investing" class="investing box carousel-cell">
               <h2 class="header2">Investing</h2>
               <div>
                 <p class="header1">$ 3400</p>
@@ -335,11 +342,11 @@
                 <p class="header2">7%</p>
               </div>
             </div>
-          </div>
-          <div class="indicators">
-            <span></span>
-            <span></span>
-            <span></span>
+            <div class="indicators">
+              <a href="#balance"></a>
+              <a href="#saving"></a>
+              <a href="#investing"></a>
+            </div>
           </div>
         </div>
         <!-- * * Currency -->
@@ -912,9 +919,11 @@
         </div>
       </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js"></script>
-    <script src="./chart-line.js"></script>
-    <script src="./chart-donat.js"></script>
-    <script src="./chart-donat-dark.js"></script>
+    <!-- <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script> -->
+    <!-- <script src="./carousel.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js"></script> -->
+    <!-- <script src="./chart-line.js"></script> -->
+    <!-- <script src="./chart-donat.js"></script> -->
+    <!-- <script src="./chart-donat-dark.js"></script> -->
   </body>
 </html>

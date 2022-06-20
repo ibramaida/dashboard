@@ -824,6 +824,10 @@ body {
   display: none;
 }
 
+.indicators {
+  display: none;
+}
+
 @media (max-width: 990px) {
   .container {
     grid-template-columns: 1fr;
@@ -853,7 +857,7 @@ body {
 @media (max-width: 650px) {
   html {
     scroll-behavior: smooth;
-    scroll-padding-top: 4rem;
+    scroll-padding-top: 6rem;
   }
   .container {
     width: 100%;
@@ -950,7 +954,7 @@ body {
     position: relative;
     /* grid-column: span 1; */
     overflow-x: auto;
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
     padding-block-end: 1.5rem;
   }
   .slide {
@@ -961,7 +965,19 @@ body {
     grid-auto-flow: column;
     grid-auto-columns: 70%;
     padding-inline: 1.5rem;
-    overflow-x: scroll;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+  }
+  .slide > div {
+    scroll-snap-align: center;
+  }
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .slide::-webkit-scrollbar {
+    display: none;
   }
   .indicators {
     position: absolute;
@@ -973,14 +989,23 @@ body {
     /* border: 1px solid red; */
     z-index: 100;
   }
-  .indicators span {
+  .indicators a {
     width: 6px;
     aspect-ratio: 1;
     border-radius: 50%;
     background-color: var(--accent);
     opacity: 0.3;
   }
-  .indicators span:nth-child(2) {
+  /* .indicators a:nth-child(2) {
+    opacity: 1;
+  } */
+  .slide > div:nth-child(1):target ~ .indicators > a:nth-child(1) {
+    opacity: 1;
+  }
+  .slide > div:nth-child(2):target ~ .indicators > a:nth-child(2) {
+    opacity: 1;
+  }
+  .slide > div:nth-child(3):target ~ .indicators > a:nth-child(3) {
     opacity: 1;
   }
 }
