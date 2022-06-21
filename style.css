@@ -1012,4 +1012,22 @@ body {
   .slides > div:nth-child(3):target ~ .indicators > a:nth-child(3) {
     opacity: 1;
   } */
+  /* .header {
+    padding: 0;
+    padding-bottom: 0.5rem;
+  } */
+  .primary-nav {
+    justify-content: center;
+  }
+  .nav-link {
+    padding: 1rem;
+  }
+  .nav-link.active {
+    background-color: #fff;
+    color: var(--accent);
+    transform: translateY(-0.5rem);
+  }
+  .nav-link svg {
+    pointer-events: none;
+  }
 }
