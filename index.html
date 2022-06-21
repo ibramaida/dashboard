@@ -261,11 +261,11 @@
         <div class="slider">
           <!-- * * slide -->
           <div
-            class="slide main-carousel"
+            class="slides main-carousel"
             data-flickity='{ "wrapAround": true }'
           >
             <!-- * * Balance -->
-            <div id="balance" class="balance box carousel-cell">
+            <div id="balance" class="slide slide1 balance box carousel-cell">
               <h2 class="header2">Total Balance</h2>
               <div>
                 <p class="header1">$ 16 995.65</p>
@@ -291,7 +291,7 @@
               </div>
             </div>
             <!-- * * Saving -->
-            <div id="saving" class="saving box carousel-cell">
+            <div id="saving" class="slide slide2 saving box carousel-cell">
               <h2 class="header2">Saving</h2>
               <div>
                 <p class="header1">$ 5 900.5</p>
@@ -317,7 +317,10 @@
               </div>
             </div>
             <!-- * * Investing -->
-            <div id="investing" class="investing box carousel-cell">
+            <div
+              id="investing"
+              class="slide slide3 investing box carousel-cell"
+            >
               <h2 class="header2">Investing</h2>
               <div>
                 <p class="header1">$ 3400</p>
@@ -343,9 +346,9 @@
               </div>
             </div>
             <div class="indicators">
-              <a href="#balance"></a>
-              <a href="#saving"></a>
-              <a href="#investing"></a>
+              <a href="#balance" class="slide1-indicator"></a>
+              <a href="#saving" class="slide2-indicator"></a>
+              <a href="#investing" class="slide3-indicator"></a>
             </div>
           </div>
         </div>
@@ -919,6 +922,7 @@
         </div>
       </div>
     </div>
+    <script src="./slideObserver.js"></script>
     <!-- <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script> -->
     <!-- <script src="./carousel.js"></script> -->
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js"></script> -->
