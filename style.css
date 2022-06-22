@@ -459,10 +459,9 @@ body {
   color: #fff;
   text-transform: capitalize;
   padding: 1rem;
-  border-radius: 100px;
+  /* border-radius: 100px; */
   /* border: 1px solid red; */
   overflow: hidden;
-  background-color: transparent;
 }
 
 .dashboard-link {
@@ -475,6 +474,49 @@ body {
   flex-direction: column;
   /* gap: 1.5rem; */
   flex: 1;
+}
+
+.primary-nav > a {
+  /* border: 1px solid orange; */
+  position: relative;
+}
+.primary-nav > a:nth-child(1)::after {
+  /* border: 1px solid orange; */
+  content: "";
+  position: absolute;
+  width: 24px;
+  aspect-ratio: 1;
+  right: 0;
+  bottom: 0;
+  background-color: var(--surface1);
+  /* border-radius: 100px 0 0 0; */
+  background: radial-gradient(
+    circle 24px at top left,
+    #0000 98%,
+    var(--surface1)
+  );
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  /* border: 1px solid red; */
+}
+.primary-nav > a:nth-child(3)::before {
+  /* border: 1px solid orange; */
+  content: "";
+  position: absolute;
+  width: 24px;
+  aspect-ratio: 1;
+  right: 0;
+  top: 0;
+  background-color: var(--surface1);
+  /* border-radius: 0 24px 0 0; */
+  /* border-radius: 100px 0 0 0; */
+  background: radial-gradient(
+    circle 24px at bottom left,
+    #0000 98%,
+    var(--surface1)
+  );
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
 }
 
 .primary-nav > a:last-child {
