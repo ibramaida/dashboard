@@ -26,7 +26,7 @@
   --surface3-light: hsl(var(--brand-hue) 20% 92%);
   --surface4-light: hsl(var(--brand-hue) 20% 85%);
   --surface-shadow-light: var(--brand-hue) 10% 20%;
-  --shadow-strength-light: 0.02;
+  --shadow-strength-light: 0.1;
 
   /* dark */
   --brand-dark: hsl(
@@ -44,7 +44,7 @@
   --surface3-dark: hsl(var(--brand-hue) 5% 20%);
   --surface4-dark: hsl(var(--brand-hue) 5% 25%);
   --surface-shadow-dark: var(--brand-hue) 50% 3%;
-  --shadow-strength-dark: 0.8;
+  --shadow-strength-dark: 0.5;
 
   /* dim */
   --brand-dim: hsl(
@@ -415,7 +415,7 @@ select {
 body {
   display: grid;
   place-items: center;
-  background-image: linear-gradient(to right, #3378ff, #9442fe);
+  background-image: linear-gradient(to left, #3378ff, #9442fe);
 }
 .container {
   /* border: 1px solid red; */
@@ -539,6 +539,14 @@ body {
   column-gap: 1rem;
 }
 
+.dashboard > *:not(.grid-header, .slider) {
+  box-shadow: 0px 4px 24px hsl(var(--surface-shadow) / var(--shadow-strength));
+}
+
+.slides > * {
+  box-shadow: 0px 4px 24px hsl(var(--surface-shadow) / var(--shadow-strength));
+}
+
 .grid-header {
   grid-column: 1 / -1;
   display: flex;
@@ -555,6 +563,7 @@ body {
   align-items: center;
   padding: 0.4rem 1rem;
   border-radius: 100vmax;
+  box-shadow: 0px 4px 24px hsl(var(--surface-shadow) / var(--shadow-strength));
 }
 
 .search input {
@@ -873,6 +882,24 @@ body {
   display: none;
 }
 
+@media (max-width: 1300px) {
+  .spending-per-month {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+  .spending-per-month > .chart-circle {
+    display: flex;
+    gap: 1rem;
+  }
+  .spending-per-month > .chart-circle > .col {
+    flex: 1;
+  }
+
+  .balance-overview {
+    grid-column: 1 / -1;
+  }
+}
+
 @media (max-width: 1100px) {
   .container {
     grid-template-columns: 1fr;
@@ -906,19 +933,19 @@ body {
     content: "";
     display: none;
   }
-
-  .balance-overview {
-    grid-column: span 2;
-  }
 }
 
 @media (max-width: 910px) {
   .primary-nav > a:last-child {
     margin-left: 0;
   }
+  .spending-per-month {
+    grid-column: 1 / -1;
+    grid-row: span 2;
+  }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 700px) {
   html {
     scroll-behavior: smooth;
     scroll-padding-top: 6rem;
@@ -1092,5 +1119,9 @@ body {
   }
   .indicators a.active {
     opacity: 1;
+  }
+
+  .spending-per-month > .chart-circle {
+    display: block;
   }
 }
