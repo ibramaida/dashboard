@@ -90,7 +90,8 @@
   --fs-400: 0.9375rem;
   --fs-300: 1rem;
   --fs-200: 0.875rem;
-  --header1: 1.25rem;
+  /* --header1: 1.25rem; */
+  --header1: clamp(0.8rem, 0.4111rem + 1.2444vw, 1.25rem);
   --header2: 0.8125rem;
   --text-semi: 0.625rem;
   --text-reg: 0.625rem;
@@ -453,6 +454,11 @@ body {
   text-decoration: none;
   text-transform: capitalize;
   letter-spacing: 1px;
+}
+
+.logo-text {
+  font-size: 1.65rem;
+  font-weight: 600;
 }
 
 .nav-link {
@@ -963,11 +969,15 @@ body {
   .logo-mobile {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 0.5rem;
     color: #fff;
     text-decoration: none;
     text-transform: capitalize;
     letter-spacing: 1px;
+  }
+  .logo-text-mob {
+    font-size: 1.24rem;
+    font-weight: 600;
   }
 
   .header {
@@ -1044,15 +1054,19 @@ body {
     background-color: var(--brand);
     padding: 0.5rem 1.5rem;
     z-index: 1000;
-    /* box-shadow: 0 0 0 100vmax var(--brand);
-    clip-path: inset(-100vmax -100vmax 0); */
+    flex-wrap: nowrap;
   }
   .search {
     flex: 1;
     background-color: var(--brand);
+    box-shadow: none;
+    padding: 0;
+    margin-right: 0.5rem;
   }
   .search svg {
     margin-left: auto;
+    transform-origin: right;
+    transform: translateY(2px) scale(0.8);
   }
   .profile {
     flex: none;
@@ -1061,6 +1075,10 @@ body {
   .profile svg {
     color: #fff;
   }
+  .profile svg {
+    transform-origin: right;
+    transform: scale(0.8);
+  }
   .profile p {
     display: none;
   }
@@ -1068,7 +1086,7 @@ body {
     display: none;
   }
   .profile svg:first-child {
-    margin-right: 0.8rem;
+    margin-right: 0;
   }
   .slider {
     position: relative;
