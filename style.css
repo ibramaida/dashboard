@@ -990,6 +990,7 @@ body {
     z-index: 100;
     background-color: var(--brand);
     /* padding-bottom: 0.5rem; */
+    transition: bottom 500ms ease-in-out;
   }
 
   .primary-nav {
@@ -1077,8 +1078,7 @@ body {
   .profile svg {
     color: #fff;
   }
-  .profile svg {
-    transform-origin: right;
+  .profile svg:first-child {
     transform: scale(0.8);
   }
   .profile p {
