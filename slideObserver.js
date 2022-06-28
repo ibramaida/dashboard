@@ -1,5 +1,4 @@
 const slides = document.querySelectorAll(".slide");
-// console.log(slides);
 
 const slide1 = document.querySelector(".slide1");
 const slide2 = document.querySelector(".slide2");
@@ -21,14 +20,6 @@ const observer = new IntersectionObserver(function (entries, observer) {
       return;
     }
 
-    // slides.forEach((slide) => {
-    //   if (entry.target == slide) {
-    //     slide.style.backgroundColor = "var(--surface3)";
-    //   } else {
-    //     slide.style.backgroundColor = "var(--surface2)";
-    //   }
-    // });
-    // console.log(entry.target);
     if (entry.target == slide1) {
       slide1Indicator.classList.add("active");
     } else {
