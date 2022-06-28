@@ -521,7 +521,7 @@ body {
   background-repeat: no-repeat;
 }
 
-.primary-nav > a:last-child {
+.primary-nav > a:last-of-type {
   margin-top: auto;
 }
 
