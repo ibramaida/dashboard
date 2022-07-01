@@ -421,6 +421,7 @@ body {
   overflow: hidden;
   display: grid;
   grid-template-columns: 1.8fr 9fr;
+  grid-template-columns: auto 1fr;
   margin-block: 2rem;
 }
 
@@ -905,7 +906,7 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
   }
-  .primary-nav > a:last-child {
+  .primary-nav > a:last-of-type {
     margin-left: auto;
   }
   .nav-link {
@@ -1012,7 +1013,7 @@ body {
   .nav-link svg {
     pointer-events: none;
   }
-  .primary-nav > a:last-child {
+  .log-off.log-off.log-off {
     display: none;
   }
   .dashboard {
